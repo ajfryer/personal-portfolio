@@ -1,0 +1,128 @@
+<!--
+File Name: index.html
+Programmer: Alex Fryer
+Description: My personal site
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Alex Fryer - Portfolio</title>
+  <meta name="description" content="Alex Fryer's Personal Portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Spectral:200,300,400,500,600,700|Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha384-9Z9AuAj0Xi0z7WFOSgjjow8EnNY9wPNp925TVLlAyWhvZPsf5Ks23Ex0mxIrWJzJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+  <script src="https://kit.fontawesome.com/4a627811af.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <!-- Add your site or application content here -->
+    <nav>
+        <div class="container">
+            <a href="">home</a>
+            <a href="#about">about</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+        </div>
+    </nav>
+    
+    <header>
+        <div class="container">
+            <h1>Hi, I'm Alex</h1>
+            <img src="img/Headshot.JPG" alt="alex fryer headshot. Dang he is handsome.">
+            <h1>I'm a web developer and product marketer<br> living in Phoenix, AZ.</h1>
+            <div class="scroll-more">&#9660;</div>
+        </div>
+    </header> 
+
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>       
+            <h3>As a web developer, I love to build websites and apps with delightful user experiences. As a product marketer, I love discovering ways to grow those experiences into successful products.</h3>
+            <hr>
+            <div class="services">
+                <ul>
+                    <li class=""><h4>web development</h4></li>
+                    <li class="">prototyping</li>
+                    <li class="">data services</li>
+                    <li class="">user interaction design</li>
+                    <li class="">user experience design</li>
+                </ul>
+                <ul>
+                    <li class=""><h4>product marketing</h4></li>
+                    <li class="">go-to-market strategy</li>
+                    <li class="">brand strategy</li>
+                    <li class="">voice of customer programs</li>
+                    <li class="">sales enablement tools</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <article id="quiz">
+                <section class="description">
+                        <h4>money quiz app</h4>
+                        <ul>
+                            <li>Simple jQuery quiz app about personal finance rules for retirement!</li>
+                            <li>HTML, CSS, jQuery</li>
+                            <li>https://ajfryer.github.io/Money-quiz-app/</li>
+                            <li><a href="">Demo</a></li>        
+                        </ul>
+                </section>                    
+                <section class="screenshot">
+                    <!--<img src="img/quiz-screenshot.png" alt="screenshot for money quiz app">-->
+                </section>                    
+            </article>
+            <hr>
+            <article id="portfolio">                
+                <section class="description">
+                    <h4>personal portfolio site</h4>
+                    <ul>
+                        <li>simple static site hosted on Github pages</li>
+                        <li>HTML, CSS, jQuery, Github Pages</li>
+                        <li>https://ajfryer.github.io/personal-portfolio/</li>
+                        <li><a href="">Demo</a></li>
+                    </ul>
+                </section>
+                <section class="screenshot" id="quiz">
+                    <!--<img src="img/quiz-screenshot.png" alt="screenshot for money quiz app">-->
+                </section>                 
+            </article>
+            
+        </div> 
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h3>
+                Want to launch and grow something awesome together?<br>
+                <span>Let's get in touch:</span>
+            </h3>        
+                <ul>
+                    <li><a href=""><i class="fas fa-envelope"></i>Email</a></li> 
+                    <li><a href=""><i class="fab fa-github"></i>Github</a></li>
+                    <li><a href=""><i class="fab fa-linkedin"></i>Linkedin</a></li>
+                    
+                </ul>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
