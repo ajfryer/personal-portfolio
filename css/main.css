@@ -12,7 +12,7 @@ Page style
   --dark-blue: #192a56;
   --light-blue: #E3F2FC;
   --gray: #4f5966;
-  --dark-gray: #353b48;
+  --dark-gray: #2f3640;
   --light-gray: #f0f3f5;
   --serif: 'Spectral', serif;
   --sans-serif: 'Montserrat', sans-serif;
@@ -205,8 +205,9 @@ about section style
 }
 
 #about .services ul li {
-  color: var(--gray);
+  color: var(--dark-gray);
   line-height: 22px;
+  font-weight: 400;
 }
 
 
@@ -247,7 +248,7 @@ Projects
 
 #projects ul li {
   margin: 1rem 0 0 0;
-  font-weight: 300;
+  font-weight: 400;
   padding-left: .5rem;
   color: var(--dark-gray);
   line-height: 22px;
