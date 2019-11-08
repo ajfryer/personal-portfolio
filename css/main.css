@@ -168,10 +168,18 @@ about section style
   margin: 0 0 0 0;
   font-weight: 400;
   font-family: var(--serif);
-  max-width: 600px;
   font-size: 1.5rem;
+  max-width: 650px;
   line-height: 2rem;
   color: var(--dark-blue);
+}
+
+#about h3.contact-cta-1 {
+  max-width: 800px;
+}
+
+#about h3.contact-cta-1>a {
+  color: var(--blue);
 }
 
 #about h4 {
@@ -196,6 +204,7 @@ about section style
 #about .services {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 #about .services ul {
