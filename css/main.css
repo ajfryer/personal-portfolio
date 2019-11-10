@@ -138,6 +138,10 @@ header img {
   color: var(--blue);
 }
 
+.scroll-more a {
+  text-decoration: none;
+}
+
 @-webkit-keyframes bounce {
   0% { transform: translateY(-5px)  }
   50% { transform: translateY(10px) }
