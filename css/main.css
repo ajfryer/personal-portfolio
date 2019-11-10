@@ -8,8 +8,8 @@ Page style
 */
 
 :root {
-  --blue: #0097e6;
-  --dark-blue: #192a56;
+  --blue: #004d80;
+  --dark-blue: #1d253c;
   --light-blue: #E3F2FC;
   --gray: #4f5966;
   --dark-gray: #2f3640;
@@ -37,10 +37,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--blue);
 }
 
+a {
+  color: var(--blue);
+}
 
 /*
 nav style
@@ -111,6 +114,7 @@ header .container {
 header h1 {
   margin-bottom: 2rem;
   line-height: 3rem;
+  font-weight: 300;
 }
 
 header img {
@@ -263,11 +267,11 @@ Projects
   line-height: 22px;
 }
 
-#projects h4 {
+#projects h3 {
   margin-top: 0px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: var(--dark-blue);
-  font-size: 1.0rem;
+  font-size: 1.15rem;
   font-weight: 500;
   text-transform: capitalize;
   font-family: var(--sans-serif);
