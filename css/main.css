@@ -281,16 +281,16 @@ Projects
   font-family: var(--sans-serif);
 }
 
-#projects section {
+#projects .project {
   display: flex;
   flex-direction: column;
 }
 
-#projects section .description {
+#projects .description {
   margin-bottom: 1rem;
 }
 
-#projects section .screenshot {
+#projects .screenshot {
   margin-bottom: 2rem;
   width: 100%;
   height: 150px;
@@ -320,7 +320,7 @@ Projects
 }
 
 @media only screen and (min-width: 800px) {
-  #projects section {
+  #projects .project {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -348,7 +348,7 @@ Projects
     height: 244px;
   }
 
-  #projects section .description {
+  #projects .description {
     width: 35%;
   }
 
