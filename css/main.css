@@ -177,13 +177,8 @@ about section style
   font-weight: 400;
   font-family: var(--serif);
   font-size: 1.5rem;
-  max-width: 650px;
   line-height: 2rem;
   color: var(--dark-blue);
-}
-
-#about h3.contact-cta-1 {
-  max-width: 800px;
 }
 
 #about h3.contact-cta-1>a {
@@ -298,25 +293,25 @@ Projects
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
-  background-size: contain;
+  background-size: cover;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 #projects #quiz .screenshot {
   background: url("../img/quiz-screenshot.png") no-repeat center center; 
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #projects #portfolio .screenshot {
   background: url("../img/portfolio-screenshot.png") no-repeat center center; 
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 @media only screen and (min-width: 800px) {
@@ -417,5 +412,3 @@ contact section style
 /*
 footer style
 */
-
-
