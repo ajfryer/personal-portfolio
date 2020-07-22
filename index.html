@@ -4,125 +4,251 @@ Programmer: Alex Fryer
 Description: My personal site
 -->
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Alex Fryer - Portfolio</title>
+    <meta name="description" content="Alex Fryer's Personal Portfolio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Alex Fryer - Portfolio</title>
-  <meta name="description" content="Alex Fryer's Personal Portfolio">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 
-  <link href="https://fonts.googleapis.com/css?family=Spectral:300,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png" />
 
-  <link rel="icon" href="favicon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha384-9Z9AuAj0Xi0z7WFOSgjjow8EnNY9wPNp925TVLlAyWhvZPsf5Ks23Ex0mxIrWJzJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha384-9Z9AuAj0Xi0z7WFOSgjjow8EnNY9wPNp925TVLlAyWhvZPsf5Ks23Ex0mxIrWJzJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
-
-</head>
-<body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-  <!-- Add your site or application content here -->
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
     <nav>
-        <div class="container">
-            <a href="">home</a>
-            <a href="#about">about</a>
-            <a href="#projects">projects</a>
-            <a href="#contact">contact</a>
+      <div class="container">
+        <a class="home" href="">AJF</a>
+        <div>
+          <a class="about" href="#about">about</a>
+          <a class="projects" href="#projects">projects</a>
+          <a class="contact" href="#contact">contact</a>
         </div>
+
+      </div>
     </nav>
-    
+
     <header>
-        <div class="container">
-            <h1>Hi, I'm Alex</h1>
-            <img src="img/Headshot.JPG" alt="Alex Fryer headshot. Pcitures of your next awesome teammate!">
-            <h1>I'm a web developer and product marketer<br> living in Phoenix, AZ.</h1>
-            <div class="scroll-more"><a href="#about">&#9660;</a></div>
-        </div>
-    </header> 
+      <div class="container">
+ 
+            <h1>
+                alex fryer
+            </h1>
+         
+            <h2>
+              web developer and product marketer specializing in small business and financial technology
+            </h2>    
+          </div>
+
+    </header >
 
     <section id="about">
-        <div class="container">
-            <h2>About</h2>       
-            <h3>As a developer, I love building websites and apps with delightful user experiences. As a product marketer, I love discovering ways to grow those experiences into successful products.</h3>
-            
-            <hr>
-            <div class="services">
-                <ul>
-                    <li class=""><h4>web development</h4></li>
-                    <li class="">prototyping</li>
-                    <li class="">data services</li>
-                    <li class="">user interaction design</li>
-                    <li class="">user experience design</li>
-                </ul>
-                <ul>
-                    <li class=""><h4>product marketing</h4></li>
-                    <li class="">go-to-market strategy</li>
-                    <li class="">brand strategy</li>
-                    <li class="">voice of customer programs</li>
-                    <li class="">sales enablement tools</li>
-                </ul>
-            </div>
-            <h3 class="contact-cta-1">I'm always looking to work with passionate teams and small business!<br> <a href="#contact">Let's work together.</a></h3>
+        <div class="about-dot-bg">
+      <div class="container">
+          <!--
+        <div class="design-squiggle">
+            <img src="img/ds-white-home-thumb.jpg" alt="the design squiggle" />
+          </div>
+          -->
+          <div class="me">  
+        <h2>About</h2>
+        <h3>
+          As a developer, I love building websites and apps with delightful user experiences. As a product marketer, I love discovering ways to grow those experiences into successful products. I'm always looking to meet passionate teams and small businesses, <a href=""#contact>so let's chat.</a>  
+        </h3>
+
+        <hr />
+        <div class="services">
+          <ul>
+            <li class=""><h4>Web Development</h4></li>
+            <li class="">prototyping</li>
+            <li class="">UI/UX</li>
+            <li class="">design systems</li>
+          </ul>
+          <ul>
+            <li class=""><h4>Product Marketing</h4></li>
+
+            <li class="">user research</li>
+            <li class="">brand strategy</li>
+            <li class="">marketing & sales enablement</li>
+          </ul>
         </div>
+        <!--
+        <h3 class="contact-cta-1">
+          I'm always looking to work with passionate teams and small
+          business!<br />
+          <a href="#contact">Let's work together.</a>
+        </h3>
+        -->
+      </div>
+    </div>
     </section>
 
     <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div id="quiz" class="project">
-                <div class="description">
-                        <h3>money quiz app</h3>
-                        <ul>
-                            <li>jQuery quiz app about personal finance rules for retirement!</li>
-                            <li>HTML, CSS, jQuery</li>
-                            <li><a href="https://github.com/ajfryer/Money-quiz-app" target="_blank">Repo</a></li>
-                            <li><a href="https://ajfryer.github.io/Money-quiz-app/" target="_blank">Demo</a></li>        
-                        </ul>
-                    </div>                    
-                <div class="screenshot"></div>                    
-                </div>
-            <hr>
-            <div id="portfolio" class="project">              
-                <div class="description">
-                    <h3>personal portfolio site</h3>            
-                    <ul>
-                        <li>Personal portfolio site hosted on Github pages</li>
-                        <li>HTML, CSS, jQuery</li>
-                        <li><a href="https://github.com/ajfryer/personal-portfolio" target="_blank">Repo</a></li>
-                        <li><a href="https://ajfryer.github.io/personal-portfolio/" target="_blank">Demo</a></li>
-                    </ul>
-                </div>
-                <div class="screenshot"></div>                 
+      <div class="container">
+        <h2>Projects</h2>
+        <div id="project1" class="project">
+            <div class="screenshot">
+                <img src="./img/quiz-screenshot.png" alt="quiz">
             </div>
-        </div> 
+          <div class="description">
+              <h3>Project 1</h3>
+              <ul>
+                  <li>
+                      <a
+                      href="https://github.com/ajfryer/Money-quiz-app"
+                      target="_blank"
+                      >Repo</a
+                      >
+                  </li>
+                  <li>
+                      <a
+                      href="https://ajfryer.github.io/Money-quiz-app/"
+                      target="_blank"
+                      >Demo</a
+                      >
+                  </li>
+              </ul>
+              <p class="summary">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+              <h4>Features</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>Advantages</h4>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <h4>Advantages</h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          </div>
+
+        </div>
+        <hr />
+        <div id="project2" class="project">
+          <div class="screenshot">
+              <img src="./img/quiz-screenshot.png" alt="quiz">
+          </div>
+          <div class="description">
+            <h3>Project 2</h3>
+            <ul>
+                <li>
+                    <a
+                    href="https://github.com/ajfryer/Money-quiz-app"
+                    target="_blank"
+                    >Repo</a
+                    >
+                </li>
+                <li>
+                    <a
+                    href="https://ajfryer.github.io/Money-quiz-app/"
+                    target="_blank"
+                    >Demo</a
+                    >
+                </li>
+            </ul>
+            <p class="summary">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <h4>Features</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h4>Advantages</h4>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h4>Advantages</h4>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <hr />
+        <div id="project3" class="project">
+          <div class="screenshot">
+              <img src="./img/quiz-screenshot.png" alt="quiz">
+          </div>
+          <div class="description">
+            <h3>Project 1</h3>
+            <ul>
+                <li>
+                    <a
+                    href="https://github.com/ajfryer/Money-quiz-app"
+                    target="_blank"
+                    >Repo</a
+                    >
+                </li>
+                <li>
+                    <a
+                    href="https://ajfryer.github.io/Money-quiz-app/"
+                    target="_blank"
+                    >Demo</a
+                    >
+                </li>
+            </ul>
+            <p class="summary">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <h4>Features</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h4>Advantages</h4>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h4>Advantages</h4>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <hr />
+      </div>
     </section>
 
     <section id="contact">
-        <div class="container">
-            <h3>
-                Want to build and grow something awesome together?<br>
-                <span>Let's get in touch:</span>
-            </h3>        
-                <ul>
-                    <li><a href="mailto:afryer@alumni.stanford.edu"><i class="fas fa-envelope"></i>Email</a></li> 
-                    <li><a href="https://github.com/ajfryer" target="_blank"><i class="fab fa-github"></i>Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/alexjfryer/" target="_blank"><i class="fab fa-linkedin"></i>Linkedin</a></li>
-                    
-                </ul>
+      <div class="container">
+        <div class="content">
+          <h3>
+            Want to build something awesome together?<br />
+            <span>Let's get in touch:</span>
+          </h3>
+          <ul>
+            <li>
+              <a href="mailto:afryer@alumni.stanford.edu"
+                ><i class="fas fa-envelope"></i>Email</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/ajfryer" target="_blank"
+                ><i class="fab fa-github"></i>Github</a
+              >
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/alexjfryer/" target="_blank"
+                ><i class="fab fa-linkedin"></i>Linkedin</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
-    <script src="https://kit.fontawesome.com/4a627811af.js" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/4a627811af.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
-

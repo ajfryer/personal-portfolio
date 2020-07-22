@@ -1,0 +1,35 @@
+/*
+font-family
+  /* font styles */
+@font-face {
+  font-family: 'DINOT';
+  src: local('DINOT-Light'), url(../fonts/DINOT-Light.ttf) format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'DINOT';
+  src: local('DINOT-Regular'),
+    url(../fonts/DINOT-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'DINOT';
+  src: local('DINOT-Medium'), url(../fonts/DINOT-Medium.ttf) format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'DINOT';
+  src: local('DINOT-Bold'), url(../fonts/DINOT-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'DINOT';
+  src: local('DINOT-Black'), url(../fonts/DINOT-Black.ttf) format('truetype');
+  font-weight: 900;
+}
+
+/* responsive typography */
+*,
+html {
+  font-size: calc(14px + (22 - 14) * (100vw - 320px) / (2560 - 320));
+}
