@@ -11,7 +11,7 @@ Page style
 
 body {
   font-family: var(--sans-serif);
-  font-weight: 300;
+  font-weight: 400;
   height: auto;
   color: var(--light-red);
   /*font-size: calc(14px + (26 - 14) * (100vw - 300px) / (1600 - 320));*/
@@ -304,7 +304,6 @@ header h2 {
     font-size: 3.5rem;
     line-height: 1.15;
     font-weight: 500;
-    max-width: 1280px;
   }
 
   header .container {
@@ -352,15 +351,12 @@ about section style
 }
 
 #about .container {
-  max-width: 800px;
+  max-width: 860px;
   padding: 1rem;
   background-color: var(--blue);
   /*
   */
   border-radius: 10px;
-  /*
-  box-shadow: 0 10px 28px 0 rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0.6rem 4rem rgba(0, 0, 0, 0.1);*/
   color: #fde1de;
 }
 
@@ -389,7 +385,17 @@ about section style
 
   text-transform: capitalize;
   font-family: var(--sans-serif);
-  font-weight: 400;
+  font-weight: 500;
+}
+
+#about p {
+  line-height: 2;
+  text-indent: 2rem;
+}
+
+#about p span {
+  color: var(--green);
+  font-weight: 500;
 }
 
 #about hr {
@@ -414,8 +420,11 @@ about section style
 }
 
 #about .services ul li {
-  line-height: 1.75rem;
-  font-weight: 300;
+  line-height: 2;
+}
+
+#about .services ul li span {
+  color: var(--green);
 }
 
 /*
