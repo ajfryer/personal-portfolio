@@ -1,6 +1,7 @@
 @media screen and (min-width: 1040px) {
-  html {
-    cursor: none;
+  html,
+  * {
+    cursor: none !important;
   }
   .cursor,
   .cursor-follower {
