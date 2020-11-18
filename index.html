@@ -1,8 +1,6 @@
 <!--
-Alex Fryer
-My personal site
+Portfolio
 -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,28 +8,21 @@ My personal site
     <title>Alex Fryer - Portfolio</title>
     <meta name="description" content="Alex Fryer's Personal Portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="icon" href="img/logo.svg" type="image/png" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha384-9Z9AuAj0Xi0z7WFOSgjjow8EnNY9wPNp925TVLlAyWhvZPsf5Ks23Ex0mxIrWJzJ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-
-    <meta name="theme-color" content="#fafafa" />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/png" />
+    <link rel="stylesheet" href="css/index.css" />
+    <meta name="theme-color" content="#09006e" />
   </head>
+
   <body>
+    <video autoplay muted loop class="bg-video">
+      <source src="assets/videos/background.mp4" type="video/mp4" />
+    </video>
+
+    <div class="bg-gradient"></div>
+
     <nav>
-      <div class="container">
-        <a class="home" href="">AJF</a>
+      <div class="container animate">
+        <a class="home" href="#header">AF</a>
         <div>
           <a class="about" href="#about">about</a>
           <a class="projects" href="#projects">projects</a>
@@ -40,174 +31,297 @@ My personal site
       </div>
     </nav>
 
-    <header>
-      <div class="container">
-        <h1>
-          alex fryer
-        </h1>
-
-        <h2>
-          web developer hooked on data and design
-        </h2>
+    <header id="header">
+      <div class="container animate">
+        <div class="contents">
+          <h1>
+            ALEX<br />
+            FRYER
+          </h1>
+          <div>
+            <h2>
+              Web<br />
+              Designer &<br />
+              Developer
+            </h2>
+            <p>
+              I enjoy making apps to help consumers and small businesses use
+              complex data analysis.
+            </p>
+            <p>
+              I'm open to work opportunities. If you're building a data product
+              and value hybrid roles,
+              <a href="#contact"
+                >let's chat. <span class="icon-message-circle"></span
+              ></a>
+            </p>
+          </div>
+        </div>
       </div>
     </header>
 
     <section id="about">
-      <div class="about-dot-bg">
-        <div class="container">
-          <!--
-        <div class="design-squiggle">
-            <img src="img/ds-white-home-thumb.jpg" alt="the design squiggle" />
-          </div>
-          -->
-          <div class="me">
-            <h2>About</h2>
-            <p>
-              I enjoy building web products that combine data analytics with
-              delightful design. I studied software engineering and web
-              development at Thinkful and management science at Stanford. I
-              previously worked in product marketing, where I helped launch
-              products and drive towards product-market fit. As a marketer, I
-              discovered my enthusiasm for web development and design, and am
-              re-orienting my career to follow my passions.
-            </p>
+      <div class="bg-dots"></div>
+      <div class="container animate">
+        <div class="contents">
+          <div class="who-i-am">
+            <div class="text">
+              <h2>ABOUT</h2>
 
-            <p>
-              Beyond web development and product marketing, my main interest is
-              finance, particularly asset management, alterative investments,
-              and blockchain technology. I want to see a world where
-              sophisticated finance is accessible to everyone through thoughtful
-              data science and design.
-              <span
-                >I am looking to join a sociable team of developers who value
-                communication, mentorship, and a willingness to learn. Please
-                <a href="#contact">contact me</a> to discuss any of these
-                projects:
-              </span>
-            </p>
-
-            <hr />
-            <div class="services">
-              <ul>
-                <li class=""><h4>Web Development</h4></li>
-                <li class="">
-                  Database and APIs
-                  <span>(Postgres, Mongo, Express, Node)</span>
-                </li>
-                <li class="">
-                  UI/UX <span>(HTML, CSS, Javascript, JQuery, React)</span>
-                </li>
-                <li class="">
-                  Modern design systems
-                  <span>(BEM, Atomic, Styled Components)</span>
-                </li>
-              </ul>
-              <ul>
-                <li class=""><h4>Web Design</h4></li>
-                <li class="">
-                  User experience research & testing <span>(HEART, AARRR)</span>
-                </li>
-                <li class="">
-                  Brand strategy & guidelines
-                  <span>(Pragmatic, Demand Metric)</span>
-                </li>
-                <li class="">
-                  Mockups, prototypes, & graphic design
-                  <span>(Figma, Sketch)</span>
-                </li>
-              </ul>
+              <p>
+                I'm a web designer & developer in Phoenix. I studied management
+                at Stanford and full-stack web dev at Thinkful. I did product
+                marketing before shifting to engineering.
+              </p>
+              <p>
+                I like UX engineering: working with designers + developers to
+                research experiences, iterate interfaces, and code components.
+                My focus is data products, particularly financial services.
+              </p>
+              <p>
+                Let's build something together.
+                <a href="#contact"> CONTACT </a>
+              </p>
             </div>
+
+            <div class="img">
+              <img src="assets/images/headshot.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="what-i-do">
+          <div>
+            <h4>Design</h4>
+            <ul>
+              <li>Personas, Journeys</li>
+              <li>Wireframes, Prototypes</li>
+              <li>Assets, Components</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Development</h4>
+            <ul>
+              <li>HTML, CSS, JQuery, React</li>
+              <li>Node, Express, ApolloGraphQl</li>
+              <li>Postgres, Mongo, Redis</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <section id="projects">
-      <div class="container">
+      <div class="container animate">
         <h2>Projects</h2>
-        <div id="project1" class="project">
+
+        <div class="project">
           <div class="screenshot">
-            <img src="./img/crypto-robos-screenshot-splash.png" alt="quiz" />
+            <img
+              src="assets/images/dfund-screenshot.png"
+              alt="quiz"
+              id="selected"
+            />
           </div>
           <div class="description">
-            <h3>Crypto Robos</h3>
+            <h3>DFunds.info</h3>
             <ul>
+              <li>LAUNCHING SOON</li>
+            </ul>
+            <p class="summary">
+              Your DeFi Fund Homepage. Intraday analysis for 100+ investment
+              funds running on the Ethereum blockchain.
+            </p>
+            <div class="value-proposition">
+              <h4>Who</h4>
+              <p>
+                For DeFi investors, seasoned crypto investors, and sophisticated
+                traditional investors who spend too much time, money, and effort
+                to get DeFi Fund analysis.
+              </p>
+              <h4>What</h4>
+              <p>
+                DFunds.info is ETFdb.com or Morningstar.com for Decentralized
+                Funds. Users get relative and absolute intraday analysis
+                (screener & profiles) for over 100 funds.
+              </p>
+              <h4>Why</h4>
+              <p>
+                Unlike other analytics sites, DFunds.info aggregates many fund
+                platforms and tailors its analysis, speed, and aesthetic for
+                investment professionals.
+              </p>
+            </div>
+            <h4>How</h4>
+            <div class="contribution">
+              <div>
+                <p>Balsamiq</p>
+                <p>Sketch</p>
+                <p>React Typescript</p>
+              </div>
+              <div>
+                <p>Emotion Styles</p>
+                <p>Storybook</p>
+                <p>APEXCharts.js</p>
+              </div>
+              <div>
+                <p>React Table</p>
+                <p>React Window</p>
+                <p>Apollo GraphQL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="screenshot">
+            <img
+              src="assets/images/crypto-robos-screenshot-splash.png"
+              alt="quiz"
+              id="selected"
+            />
+          </div>
+          <div class="description">
+            <a href="https://cryptorobos.vercel.app/" target="_blank">
+              <h3>Crypto Robos</h3></a
+            >
+
+            <ul>
+              <li>
+                <a href="https://cryptorobos.vercel.app/" target="_blank"
+                  ><span class="icon-external-link"></span
+                ></a>
+              </li>
               <li>
                 <a
                   href="https://github.com/ajfryer/crypto-robos-client"
                   target="_blank"
-                  >Repo</a
-                >
-              </li>
-              <li>
-                <a href="https://cryptorobos.vercel.app/" target="_blank"
-                  >Demo</a
-                >
+                  ><span class="icon-github"></span
+                ></a>
               </li>
             </ul>
             <p class="summary">
-              Think like a crypto robo. Simulate popular investment strategies
-              on crypto coins and benchmark your HODL.
+              Think like a crypto robo. Simulate popular crypto investment
+              portfolios and benchmark your HODL.
             </p>
-            <h4>Who is it for?</h4>
-            <p>
-              The entire crypto investing community, both retail and
-              institutional.
-            </p>
-            <h4>Why did I build it?</h4>
-            <p>
-              The mission is to legitimize crypto as an asset class. The best
-              way to do that is with industry standard benchmarks like those
-              found on crypto robos.
-            </p>
-            <h4>Tech</h4>
-            <p>React, Styled Components, HTML5, CSS3</p>
+            <div class="value-proposition">
+              <h4>Who</h4>
+              <p>
+                For DeFi and crypto investors, retail and institutional, who
+                lose money, clients, or confidence because their portfolios are
+                improperly benchmarked.
+              </p>
+              <h4>What</h4>
+              <p>
+                Crypto Robos is like Standard & Poors indicies for popular
+                crypto coins. Users get academically concieved + practically
+                useful benchmark portfolios.
+              </p>
+              <h4>Why</h4>
+              <p>
+                Unlike other crypto benchmark providers, Crypto Robos offers
+                more than an equal weight benchmark, with new benchmarks coming
+                soon.
+              </p>
+            </div>
+            <h4>How</h4>
+            <div class="contribution">
+              <div>
+                <p>Pen & Dotpad Paper</p>
+                <p>HTML Mockups</p>
+                <p>React</p>
+              </div>
+              <div>
+                <p>Styled Components</p>
+                <p>Victory Charts</p>
+                <p>Portfolio Analytics</p>
+              </div>
+              <div>
+                <p></p>
+                <p>Express</p>
+                <p>Postgres</p>
+                <p>Knex</p>
+              </div>
+            </div>
           </div>
         </div>
-        <hr />
-        <div id="project2" class="project">
+
+        <div class="project">
           <div class="screenshot">
-            <img src="./img/roach-screenshot-portfolio.png" alt="quiz" />
+            <img
+              src="assets/images/roach-screenshot-portfolio.png"
+              alt="quiz"
+              id="selected"
+            />
           </div>
           <div class="description">
             <h3>Roach</h3>
             <ul>
               <li>
-                <a
-                  href="https://github.com/ajfryer/roach-client"
-                  target="_blank"
-                  >Repo</a
-                >
+                <a href="https://cryptorobos.vercel.app/" target="_blank"
+                  ><span class="icon-external-link"></span
+                ></a>
               </li>
               <li>
-                <a href="https://roach.now.sh/" target="_blank">Demo</a>
+                <a
+                  href="https://github.com/ajfryer/crypto-robos-client"
+                  target="_blank"
+                  ><span class="icon-github"></span
+                ></a>
               </li>
             </ul>
             <p class="summary">
-              harder to kill investment portfolios. Discover how alternatives
-              like gold and futures can diversify your stock and bond portfolio
+              Harder to kill investment portfolios. Discover the power of
+              alternatives investments for your traditional portfolio.
             </p>
-            <h4>Who is it for?</h4>
-            <p>
-              Investors nearing retirement or younger investors saving for big
-              purchases
-            </p>
-            <h4>Why did I build it?</h4>
-            <p>
-              The traditionl stock and bond portfolio is innappropriate for many
-              investors. This site educates them on the importance of
-              alternative asset classes.
-            </p>
-            <h4>Tech</h4>
-            <p>React, Styled Components, HTML5, CSS3</p>
+            <div class="value-proposition">
+              <h4>Who</h4>
+              <p>
+                For investors nearing retirement or saving for big purchases,
+                who are uncomfortable with a large, long-lasting loss to their
+                stocks and bonds.
+              </p>
+              <h4>What</h4>
+              <p>
+                Roach is the Permanent Portfolio with a twist. Users get an
+                equal weight or minimum volatility portfolio of stocks, bonds,
+                gold, and futures.
+              </p>
+              <h4>Why</h4>
+              <p>
+                Unlike similar alternative portfolios, the Roach portfolio uses
+                a healthy allocation of "futures", an actively managed asset
+                class.
+              </p>
+            </div>
+            <h4>How</h4>
+            <div class="contribution">
+              <div>
+                <p>Pen & Dotpad Paper</p>
+                <p>HTML Mockups</p>
+                <p>React</p>
+              </div>
+              <div>
+                <p>Styled Components</p>
+                <p>Victory Charts</p>
+                <p>Portfolio Analytics</p>
+              </div>
+              <div>
+                <p></p>
+                <p>Express</p>
+                <p>Postgres</p>
+                <p>Knex</p>
+              </div>
+            </div>
           </div>
         </div>
-        <hr />
-        <div id="project3" class="project">
+
+        <div class="project">
           <div class="screenshot">
             <img
-              src="./img/crypto-trend-following-screenshot-splash.png"
+              src="assets/images/crypto-trend-following-screenshot-splash.png"
               alt="quiz"
+              id="selected"
             />
           </div>
           <div class="description">
@@ -215,78 +329,113 @@ My personal site
             <ul>
               <li>
                 <a
-                  href="https://github.com/ajfryer/crypto-trend-following/"
+                  href="https://ajfryer.github.io/crypto-trend-following/"
                   target="_blank"
-                  >Repo</a
-                >
+                  ><span class="icon-external-link"></span
+                ></a>
               </li>
               <li>
                 <a
-                  href="https://ajfryer.github.io/crypto-trend-following/"
+                  href="https://github.com/ajfryer/crypto-trend-following/"
                   target="_blank"
-                  >Demo</a
-                >
+                  ><span class="icon-github"></span
+                ></a>
               </li>
             </ul>
             <p class="summary">
               Do more than HODL. Simulate hedge-fund-like Trend Following
-              strategies on popular crypto coins - for free.
+              strategies on popular crypto coins
             </p>
-            <h4>Who is it for?</h4>
-            <p>
-              Crypto investing powerusers and institutions who allocate >1% of
-              their portfolio to crypto HODL
-            </p>
-            <h4>Why did I build it?</h4>
-            <p>
-              The projects mission is to bring hedge fund style investing to
-              crypto. Trend following is the first systematic strategy needed by
-              the community.
-            </p>
-            <h4>Tech</h4>
-            <p>HTML5, CSS3, jQuery</p>
+            <div class="value-proposition">
+              <h4>Who</h4>
+              <p>
+                Any crypto poweruser who can't financially or emotionally afford
+                the high volatility and large drawdowns of HODLing crypto.
+              </p>
+              <h4>What</h4>
+              <p>
+                Crypto Trend Following is a hedge fund strategy, but for crypto.
+                Users get a volatility-targeted trend following strategy for
+                their crypto.
+              </p>
+              <h4>Why</h4>
+              <p>
+                Unlike other crypto strategies online, Crypto Trend Following
+                adopts both a range-based and volatility-based filter to better
+                target risk
+              </p>
+            </div>
+            <h4>How</h4>
+            <div class="contribution">
+              <div>
+                <p>Pen & Dotpad Paper</p>
+                <p>Balsamiq</p>
+                <p>Sketch</p>
+              </div>
+              <div>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JQuery</p>
+              </div>
+              <div>
+                <p>Charts.js</p>
+                <p>Alpha Vantage</p>
+                <p>Portfolio Analytics</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <div class="container">
+      <div class="container animate">
+        <h2>Contact</h2>
         <div class="content">
-          <h3>
-            Want to build something awesome together?<br />
-            <span>Let's get in touch:</span>
-          </h3>
-          <ul>
-            <li>
-              <a href="mailto:alex.jeffrey.fryer@gmail.com"
-                ><i class="fas fa-envelope"></i>Email</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/ajfryer" target="_blank"
-                ><i class="fab fa-github"></i>Github</a
-              >
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/alexjfryer/" target="_blank"
-                ><i class="fab fa-linkedin"></i>Linkedin</a
-              >
-            </li>
-          </ul>
+          <div class="wrapper">
+            <h3>Let's work together.</h3>
+            <p>
+              If you're building a killer app and value hybrid roles, I may be a
+              great fit for your team.
+            </p>
+
+            <ul>
+              <li>
+                <a href="mailto:alex.jeffrey.fryer@gmail.com"
+                  ><span class="icon-mail"></span>Email</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/ajfryer" target="_blank"
+                  ><span class="icon-github"></span>Github</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/alexjfryer/"
+                  target="_blank"
+                  ><span class="icon-linkedin"></span>Linkedin</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
+    <div class="cursor-follower"></div>
+    <div class="cursor"></div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
       integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
       crossorigin="anonymous"
     ></script>
-    <script src="js/main.js"></script>
     <script
-      src="https://kit.fontawesome.com/4a627811af.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha384-aeOf8PUQ30Impyyio8FDxFHefK/3nHBJWjuT1u1FnJHZU+ro9q9E9cXUzfWBk0kT"
       crossorigin="anonymous"
     ></script>
+
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>

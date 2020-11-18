@@ -29,7 +29,36 @@ font-family
 }
 
 /* responsive typography */
-*,
 html {
-  font-size: calc(16px + (22 - 16) * (100vw - 320px) / (2560 - 320));
+  font-size: calc(16px + (22 - 16) * (100vw - 256px) / (2560 - 256));
+}
+:root {
+  --serif: 'DINOT', sans-serif;
+  --sans-serif: 'DINOT', sans-serif;
+}
+
+body,
+p {
+  line-height: 1.65;
+  font-family: var(--sans-serif);
+  font-weight: 300;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+small,
+.small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+a {
 }

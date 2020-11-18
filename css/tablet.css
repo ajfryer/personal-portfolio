@@ -1,0 +1,139 @@
+@media screen and (min-width: 768px) {
+  nav a.about {
+    margin-right: 1rem;
+  }
+
+  nav a.projects {
+    margin-right: 1rem;
+  }
+
+  header h1 {
+    margin: 0 4vw 0 0;
+  }
+
+  header h2 {
+  }
+
+  header .container {
+    height: calc(75vh);
+  }
+
+  header .dot-bg {
+    width: 420px;
+  }
+
+  #about .container {
+    padding: 1rem;
+    width: 85%;
+  }
+
+  #about .contents .text {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 60%;
+  }
+
+  #about .about-dot-bg {
+  }
+
+  #about .contents .text {
+  }
+
+  #about .contents p {
+    margin-top: 1rem;
+  }
+
+  #about .contents p:last-of-type {
+    text-align: left;
+  }
+
+  #about h2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 10vw;
+  }
+
+  #about .contents .who-i-am {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  #about hr {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+  }
+
+  #about .contents .img {
+    background-color: var(--light-blue);
+    height: max-content;
+    position: relative;
+    transition: var(--transition);
+    width: calc(40% - 4vw);
+    margin: auto;
+  }
+
+  #about .contents .img::before {
+  }
+
+  #about .contents .img::after {
+  }
+
+  #about .what-i-do {
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #about .what-i-do div {
+    flex: 1 0 0;
+  }
+
+  #about .what-i-do div:nth-of-type(2) {
+    align-self: normal;
+  }
+
+  #about .what-i-do div:nth-of-type(3) {
+    align-self: normal;
+  }
+
+  #projects h2 {
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  #projects .screenshot {
+    max-width: 640px;
+    margin: 0 auto 2rem auto;
+  }
+
+  #projects .description {
+    max-width: 640px;
+    margin: 0 auto 0 auto;
+  }
+
+  #projects .description .contribution {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #projects .project:nth-child(even) .description {
+    margin: 0 auto 0 auto;
+  }
+
+  #contact {
+  }
+
+  #contact .container {
+    max-width: 640px;
+  }
+
+  #contact h2 {
+    font-size: 10vw;
+  }
+}
