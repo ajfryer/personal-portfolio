@@ -33,9 +33,9 @@ nav a:hover {
 nav a.home {
   background-color: transparent;
   color: var(--red);
-  padding: 0.25rem 0rem;
+  padding: 0.25rem 0rem 0.15rem 0;
   border: 2px solid var(--red);
-  font-weight: 600;
+  font-weight: 900;
   writing-mode: vertical-lr;
   letter-spacing: 2px;
   font-size: 1rem;
@@ -68,8 +68,8 @@ header .container {
   position: relative;
   text-align: left;
   max-width: 100%;
-  margin-top: 100px;
-  min-height: calc(100vh - 100px);
+
+  min-height: calc(100vh);
 
   padding: 1rem 0.25rem;
 }
@@ -140,7 +140,22 @@ header h2 {
     0 0 32px rgba(61, 212, 133, 0.24);*/
   display: flex;
   margin: 0px 0 0 0;
-  font-size: 10vw;
+  font-size: 9vw;
+}
+
+header h3 {
+  font-weight: 100;
+  color: var(--light-red);
+
+  text-transform: none;
+  z-index: 1;
+  /*text-shadow: 3px 2px 0px rgba(0, 0, 0, 1);*/
+  text-transform: none;
+  /*text-shadow: 0 0 80px rgba(61, 212, 133, 0.48),
+    0 0 32px rgba(61, 212, 133, 0.24);*/
+  display: flex;
+  margin: 0 0 1rem 0;
+  font-size: 9vw;
 }
 
 header p {
@@ -153,7 +168,16 @@ header b {
 }
 
 header a {
-  font-weight: 500;
+  position: relative;
+}
+
+header a span {
+  margin: 0 0 0 0.25rem;
+  position: absolute;
+  top: calc(50% - 0.6rem);
+}
+
+header a span::before {
 }
 
 header .container {
@@ -637,7 +661,6 @@ contact section style
 #contact p {
   font-weight: 400;
   margin: 1rem 0;
-  max-width: 640px;
 }
 
 #contact p span {

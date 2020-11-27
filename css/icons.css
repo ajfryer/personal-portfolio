@@ -26,6 +26,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chevrons-right:before {
+  content: '\e904';
+}
 .icon-external-link:before {
   content: '\e900';
 }
@@ -37,10 +40,4 @@
 }
 .icon-mail:before {
   content: '\e903';
-}
-.icon-message-circle:before {
-  content: '\e904';
-}
-.icon-message-square:before {
-  content: '\e905';
 }

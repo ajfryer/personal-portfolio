@@ -28,20 +28,26 @@
   }
 
   header .container {
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh);
+    margin-top: 50px;
     height: max-content;
   }
 
   header h1 {
     letter-spacing: 0px;
     font-size: 15vw;
-    line-height: 15vw;
+    line-height: 14vw;
     z-index: 2;
-    margin-right: 3vw;
+    margin-right: 2.75vw;
+    -webkit-text-stroke: 4px var(--green);
+    text-stroke: 4px var(--green);
   }
 
   header hr {
     width: 200px;
+  }
+
+  header div {
   }
 
   header h2 {
@@ -50,6 +56,10 @@
     z-index: 3;
     height: 100%;
     display: flex;
+  }
+
+  header h3 {
+    font-size: 5vw;
   }
 
   /* about */
@@ -86,6 +96,7 @@
 
   #about .contents .who-i-am {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
   }
