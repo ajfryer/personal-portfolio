@@ -1,7 +1,6 @@
 @media screen and (min-width: 1040px) {
   html,
   * {
-    cursor: none !important;
   }
   .cursor,
   .cursor-follower {
@@ -34,13 +33,12 @@
   }
 
   header h1 {
-    letter-spacing: 0px;
-    font-size: 15vw;
     line-height: 14vw;
     z-index: 2;
     margin-right: 2.75vw;
+    /*
     -webkit-text-stroke: 4px var(--green);
-    text-stroke: 4px var(--green);
+    text-stroke: 4px var(--green);*/
   }
 
   header hr {
@@ -51,15 +49,16 @@
   }
 
   header h2 {
-    text-transform: capitalize;
-    font-size: 5vw;
     z-index: 3;
     height: 100%;
-    display: flex;
+  }
+
+  header h2 span {
   }
 
   header h3 {
     font-size: 5vw;
+    margin: 0 0 2rem 0;
   }
 
   /* about */
@@ -71,9 +70,6 @@
   }
 
   #about .contents .text {
-    max-width: 640px;
-    display: flex;
-    flex-direction: column;
   }
 
   #about .about-dot-bg {
@@ -92,6 +88,13 @@
   #about .contents .img {
     width: 33%;
     max-width: 250px;
+  }
+
+  #about .what-i-do {
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 100%;
+    grid-gap: 1rem;
   }
 
   #about .contents .who-i-am {

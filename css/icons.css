@@ -26,18 +26,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-chevrons-right:before {
-  content: '\e904';
-}
 .icon-external-link:before {
-  content: '\e900';
-}
-.icon-github:before {
   content: '\e901';
 }
-.icon-linkedin:before {
+.icon-github:before {
   content: '\e902';
 }
-.icon-mail:before {
+.icon-linkedin:before {
   content: '\e903';
+}
+.icon-mail:before {
+  content: '\e904';
+}
+.icon-menu:before {
+  content: '\e900';
 }

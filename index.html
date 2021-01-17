@@ -9,49 +9,62 @@ Portfolio
     <meta name="description" content="Alex Fryer's Personal Portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="assets/images/favicon.svg" type="image/png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+      
+
+
     <link rel="stylesheet" href="css/index.css" />
     <meta name="theme-color" content="#09006e" />
   </head>
 
   <body>
+
     <video autoplay muted loop class="bg-video">
       <source src="assets/videos/background.mp4" type="video/mp4" />
     </video>
 
     <div class="bg-gradient"></div>
 
-    <nav>
-      <div class="container animate">
+    <nav class="animate">
+
         <a class="home" href="#header">AF</a>
-        <div>
+
           <a class="about" href="#about">about</a>
           <a class="projects" href="#projects">projects</a>
           <a class="contact" href="#contact">contact</a>
-        </div>
-      </div>
+
+
+
     </nav>
 
     <header id="header">
       <div class="container animate">
         <div class="contents">
-          <h1>
-            ALEX<br />
-            FRYER
+          <h1 class="name">
+ALEX<br/><span>FRYER</span> 
           </h1>
-          <div>
-            <h2>
-              UX<br />
-              Engineer<br />
+
+          <div class='right'>
+            <h2 class='title'>
+              <span>Digital<br/>
+                Designer</span>
             </h2>
-            <h3>
-              Research<br />
-              Design<br />
-              Development
-            </h3>
+            <h2>
+              interfaces<br/>experiences<br/>products 
+            </h2>
+
+
+
             <a href="#contact">
-              work together <span class="icon-chevrons-right"></span
-            ></a>
+              Get In Touch &#8594;</a>
           </div>
+
+          
+      
+
+        </div>
+        <div class="header-bg">
         </div>
       </div>
     </header>
@@ -60,59 +73,80 @@ Portfolio
       <div class="bg-dots"></div>
       <div class="container animate">
         <div class="contents">
-          <h2>ABOUT</h2>
-          <div class="who-i-am">
-            <div class="text">
-              <p>
-                I'm a UX Engineer in AZ. I studied Management Science &
-                Engineering at Stanford and Full Stack Web Development at
-                Thinkful. I did product marketing before shifting to
-                engineering.
-              </p>
-              <p>
-                I enjoy contributing to UX research, design iterations, and
-                component development. My domain expertise is financial services
-                products for consumers and small-medium businesses.
-              </p>
+          <h3 class='section-heading'>Hi, I'm Alex </h3>
 
+            <div class="text">
+              <!--
               <p>
-                Building something great?
-                <a href="#contact"> let's work together. </a>
+                I'm an associate Web Product Designer in Arizona. I have a product marketing and web development background that enables me to deliver end-to-end product design.
               </p>
+              <p>
+                As a designer, I do UI/UX research, prototyping, and evaluation. I focus on designs with high business value. I can also contribute to production design systems with modern frontend frameworks. 
+              </p>-->
+              <p class='summary'>I enjoy prototyping products, growing KPIs through design, & maintaining frontend design systems.</p>
+
+              <hr>
+              <!--
+-->
+
+              <div class="what-i-do">
+                <div >
+                  <h4>Product Design</h4>
+                  <p>
+                    Progressive Web Apps with modern frameworks. 
+                  </p>
+               
+                  <ul>
+                    <li>Single Page Apps </li> 
+                    <li>Static Sites </li>  
+                    <li>Jamstack</li> 
+                    <li>Testing</li> 
+                    <li>CI/CD</li> 
+                  </ul>
+                </div>
+      
+      
+      
+                <div>
+                  <h4>Growth Design</h4>
+                  <p>
+                    Interfaces and Flows that maximize usability.
+                  </p>
+      
+                  <ul>
+                    <li>Component Libs</li>
+                    <li>Styling Architecture</li>
+                    <li>Heuristic Evaluation</li>
+                    <li>Usability Testing</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Design Systems</h4>
+                  <p>
+                    Unique experiences that create lasting value.
+                  </p>
+                
+                  <ul>
+                    <li>Tables</li>
+                    <li>Charts</li>
+                    <li>Visualizations</li>
+                    <li>Micro-Interactions</li>
+                    <li>Animations</li>
+                  </ul>
+                </div>
+      
+              </div>
+
+
             </div>
 
             <div class="img">
               <img src="assets/images/headshot.jpg" alt="" />
             </div>
-          </div>
-        </div>
 
-        <div class="what-i-do">
-          <div>
-            <h4>research</h4>
-            <ul>
-              <li>User Personas</li>
-              <li>Journey Maps</li>
-              <li>UI & UX Tests</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Design</h4>
-            <ul>
-              <li>Static Wireframes</li>
-              <li>Interactive Prototypes</li>
-              <li>Design Systems</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Development</h4>
-            <ul>
-              <li>Production Components</li>
-              <li>Data Visualization</li>
-              <li>Data Modeling</li>
-            </ul>
-          </div>
         </div>
+   
+
       </div>
     </section>
 

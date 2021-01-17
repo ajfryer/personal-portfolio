@@ -1,22 +1,4 @@
 /* animations for nav */
-nav {
-  transition: background-image 300ms linear;
-  transition: height 300ms linear;
-}
-
-nav.scrolled {
-  background-image: linear-gradient(
-    to right,
-    var(--blue),
-    var(--blue) 2px,
-    var(--blue) 2px,
-    var(--blue)
-  );
-  transition: background-image 300ms linear;
-  transition: height 300ms linear;
-  height: 75px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
 
 /* animations for fadeIn sections */
 .animate {

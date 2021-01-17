@@ -8,10 +8,14 @@
   }
 
   header h1 {
-    margin: 0 4vw 0 0;
+    /*margin: 0 4vw 0 0;*/
   }
 
   header h2 {
+  }
+
+  header h3 {
+    margin: 0 0 1rem 0;
   }
 
   header .container {
@@ -28,10 +32,6 @@
   }
 
   #about .contents .text {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    width: 60%;
   }
 
   #about .about-dot-bg {
@@ -85,13 +85,11 @@
   }
 
   #about .what-i-do {
-    padding: 0;
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 100%;
   }
 
   #about .what-i-do div {
-    flex: 1 0 0;
   }
 
   #about .what-i-do div:nth-of-type(2) {
