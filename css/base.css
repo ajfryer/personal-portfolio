@@ -1,0 +1,238 @@
+html,
+* {
+  cursor: default;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+:root {
+  --transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --border-radius: 4px;
+}
+
+::selection {
+  background: var(--red); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: var(--red); /* Gecko Browsers */
+}
+
+body {
+  height: auto;
+  color: var(--light-red);
+  background-color: var(--dark-blue);
+  overflow-x: hidden;
+}
+
+.container {
+}
+
+.container-fluid {
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+video.bg-video {
+  object-fit: fill;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -200;
+}
+
+.bg-gradient {
+  background-color: rgba(9, 0, 110, 0.95);
+
+  object-fit: cover;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -100;
+}
+
+.bg-gradient::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 86, 0) 0%,
+    rgba(0, 0, 86, 0.6) 66%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.cursor-follower {
+  position: fixed;
+  background-color: var(--red);
+  opacity: 1;
+  width: 90px;
+  height: 90px;
+  /*border: 2px solid var(--red);*/
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: 999;
+  top: -100px;
+  left: -100px;
+  display: hidden;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+p:hover {
+  mix-blend-mode: difference;
+}
+
+.cursor-follower.active {
+  opacity: 1;
+  /*transform: scale(1);*/
+  mix-blend-mode: difference;
+}
+
+a {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+u {
+  text-decoration: none;
+
+  background-image: linear-gradient(
+    to right,
+    var(--light-blue) 100%,
+    transparent 100%
+  );
+  background-position: 0 0.8em;
+  background-repeat: repeat-x;
+  background-size: 0.5em 1em;
+}
+
+span.u::before {
+}
+
+a:after,
+a:visited:after {
+  content: '';
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background: var(--red);
+  transition: 0.5s;
+}
+a:hover:after,
+a:visited:hover:after {
+  width: 100%;
+}
+
+hr {
+  max-width: 75px;
+  height: 2px;
+  background-color: var(--green);
+  border: 0px;
+  margin: 1rem 0;
+}
+
+.container {
+}
+
+a.arrow-btn {
+  transition: 0.5s;
+}
+
+a.arrow-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  padding-right: 25px;
+}
+
+a.arrow-btn span:after {
+  font-family: 'icomoon' !important;
+  content: '\e906';
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  right: 0px;
+  transition: 0.5s;
+}
+
+a.arrow-btn:hover span:after {
+  font-family: 'icomoon' !important;
+  content: '\e905';
+  opacity: 1;
+  right: 0;
+}
+
+.partial-border {
+  border: 2px solid var(--light-blue);
+  border-radius: var(--border-radius);
+  transition: all 250ms ease-in-out;
+}
+
+.partial-border:hover {
+  transition: all 250ms ease-in-out;
+}
+
+.partial-border:hover::before {
+  width: 0.25rem;
+  top: 0.25rem;
+  transition: all 250ms ease-in-out;
+}
+
+.partial-border:hover::after {
+  height: 0.25rem;
+  left: 0.25rem;
+  transition: all 250ms ease-in-out;
+}
+
+.partial-border::before {
+  content: '';
+  width: 0.5rem;
+  height: 100%;
+  background-color: transparent;
+  border-top: 2px solid var(--light-blue);
+  border-right: 2px solid var(--light-blue);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  position: absolute;
+  top: 0.5rem;
+  left: 100%;
+  z-index: -1;
+  transition: all 250ms ease-in-out;
+}
+
+.partial-border::after {
+  content: '';
+  width: 100%;
+  height: 0.5rem;
+  border-left: 2px solid var(--light-blue);
+  border-bottom: 2px solid var(--light-blue);
+  position: absolute;
+  left: 0.5rem;
+  top: 100%;
+  z-index: -1;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  transition: all 250ms ease-in-out;
+}

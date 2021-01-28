@@ -41,15 +41,18 @@ export const scrollListener = () => {
 export const clickListener = () => {
   $('a[href*="#"]').on('click', (e) => {
     e.preventDefault();
+    const $target = $(e.target).attr('href') ? $(e.target).attr('href') : $($(e.currentTarget)).attr('href')
     $('html, body').animate(
       {
-        scrollTop: $($(e.target).attr('href')).offset().top,
+        scrollTop: $($target).offset().top,
       },
       500,
       'linear'
     );
   });
 };
+
+
 
 // on document ready
 $((() => {})());

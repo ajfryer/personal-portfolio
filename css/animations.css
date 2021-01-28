@@ -95,3 +95,224 @@
     border: 1px solid var(--red);
   }
 }
+
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    color: rgba(61, 212, 133, 1);
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    color: rgba(61, 212, 133, 0.4);
+  }
+}
+
+.flicker-slow {
+  animation: flicker 3s linear infinite;
+}
+
+.flicker-fast {
+  animation: flicker 1s linear infinite;
+}
+
+.flicker-slowest {
+  animation: flicker 10s linear alternate-reverse infinite;
+}
+
+.blob {
+}
+
+.blob::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-blue);
+  animation-name: blobby;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  mix-blend-mode: luminosity;
+}
+
+@keyframes blobby {
+  0% {
+    border-radius: 50%;
+  }
+  20% {
+    border-radius: 41% 59% 41% 59% / 53% 51% 49% 47%;
+    /*transform: rotate(36deg);*/
+  }
+  40% {
+    /*transform: rotate(72deg);*/
+    border-radius: 43% 57% 41% 59% / 53% 52% 48% 47%;
+  }
+  80% {
+    border-radius: 48% 52% 41% 59% / 48% 58% 42% 52%;
+    /*transform: rotate(108deg);*/
+  }
+  100% {
+    /*transform: rotate(144deg);*/
+    border-radius: 54% 46% 60% 40% / 43% 55% 45% 57%;
+  }
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#loader {
+  display: block;
+  position: relative;
+
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  padding: 0 0.5em;
+
+  -webkit-animation: rotate-off 1.5s cubic-bezier(0.645, 0.045, 0.355, 1); /* Chrome, Opera 15+, Safari 5+ */
+  animation: rotate-off 1.5s cubic-bezier(0.645, 0.045, 0.355, 1); /* Chrome, Firefox 16+, IE 10+, Opera */
+
+  animation-delay: 1s;
+
+  animation-fill-mode: forwards;
+
+  z-index: 1001;
+}
+
+#loader:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 2px solid var(--red);
+  border-top: 2px solid var(--red);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  visibility: hidden;
+
+  -webkit-animation: draw-before 1s linear; /* Chrome, Opera 15+, Safari 5+ */
+  animation: draw-before 1s linear; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+  animation-fill-mode: forwards;
+}
+
+#loader:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-right: 2px solid var(--red);
+  border-bottom: 2px solid var(--red);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  visibility: hidden;
+
+  -webkit-animation: draw-after 1s linear; /* Chrome, Opera 15+, Safari 5+ */
+  animation: draw-after 1s linear; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+  animation-fill-mode: forwards;
+}
+
+.no-js #loader-wrapper {
+  display: none;
+}
+
+@keyframes rotate-off {
+  0% {
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(90deg);
+  }
+}
+
+@keyframes draw-before {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  1% {
+  }
+  100% {
+    width: 100%;
+    height: 33%;
+    visibility: visible;
+  }
+}
+
+@keyframes draw-after {
+  0% {
+    height: 0px;
+    width: 0px; /* Firefox 16+, IE 10+, Opera */
+  }
+  1% {
+  }
+  100% {
+    width: 33%;
+    height: 100%;
+    visibility: visible;
+  }
+}
+
+@keyframes bounce-off {
+  0% {
+  }
+  50% {
+  }
+  100% {
+    transform: rotate(-90deg) translateY(-100vh);
+  }
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: transparent;
+  z-index: 1000;
+  -webkit-transform: translateX(0); /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(0); /* IE 9 */
+  transform: translateX(0); /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.loaded #loader-wrapper {
+  visibility: hidden;
+
+  -webkit-transform: translateY(-100%); /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateY(-100%); /* IE 9 */
+  transform: translateY(-100%); /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out;
+}

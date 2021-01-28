@@ -1,11 +1,10 @@
-var cursor = $('.cursor'),
-  follower = $('.cursor-follower');
+const follower = $('.cursor-follower');
 
-var posX = 0,
-  posY = 0;
+let posX = -50,
+  posY = -50;
 
-var mouseX = 0,
-  mouseY = 0;
+let mouseX = -50,
+  mouseY = -50;
 
 TweenMax.to({}, 0.016, {
   repeat: -1,
@@ -20,14 +19,9 @@ TweenMax.to({}, 0.016, {
       },
     });
 
-    TweenMax.set(cursor, {
-      css: {
-        left: mouseX,
-        top: mouseY,
-      },
-    });
   },
 });
+
 
 export const customCursor = () => {
   $(document).on('mousemove', function (e) {
@@ -35,12 +29,10 @@ export const customCursor = () => {
     mouseY = e.clientY;
   });
 
-  $('a').on('mouseenter', function () {
-    cursor.addClass('active');
+  $('a, img, p, h1, h2, h3, h4, h5, li, span').on('mouseenter', function () {
     follower.addClass('active');
   });
-  $('a').on('mouseleave', function () {
-    cursor.removeClass('active');
+  $('a, img, p, h1, h2, h3, h4, h5, li, span').on('mouseleave', function () {
     follower.removeClass('active');
   });
 };

@@ -1,6 +1,19 @@
 /* responsive typography */
+@font-face {
+  font-family: 'DINCondensed';
+  src: local('DINCondensed-Regular'),
+    url(../assets/fonts/DINCondensed-Regular.otf) format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'DINCondensed';
+  src: local('DINCondensed-Bold'),
+    url(../assets/fonts/DINCondensed-Bold.otf) format('opentype');
+  font-weight: 700;
+}
+
 html {
-  font-size: calc(16px + (22 - 16) * (100vw - 256px) / (2560 - 256));
+  font-size: calc(16px + (18 - 16) * (100vw - 256px) / (1280 - 256));
 }
 :root {
 }
@@ -8,9 +21,9 @@ html {
 body,
 p {
   line-height: 1.65;
-  font-family: var(--sans-serif);
 
   font-family: 'Roboto Condensed', sans-serif;
+
   font-weight: 100;
   margin: 0;
 }
@@ -22,12 +35,10 @@ h4,
 h5 {
   margin: 0;
   line-height: 1.2;
-
   font-weight: 900;
 }
 
 h1 {
-  font-family: 'Roboto Condensed', sans-serif;
 }
 
 small,
@@ -38,7 +49,7 @@ small,
 
 a {
   color: var(--red);
-  font-weight: 900;
+  font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
 }

@@ -26,6 +26,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-right:before {
+  content: '\e905';
+}
+.icon-chevron-right:before {
+  content: '\e906';
+}
 .icon-external-link:before {
   content: '\e901';
 }
