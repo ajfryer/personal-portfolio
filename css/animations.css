@@ -96,7 +96,7 @@
     border: 1px solid var(--red);
   }
 }
-
+/*
 @keyframes flicker {
   0%,
   19.999%,
@@ -128,7 +128,7 @@
 
 .flicker-slowest {
   animation: flicker 10s linear alternate-reverse infinite;
-}
+}*/
 
 .blob {
 }

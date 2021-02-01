@@ -1,9 +1,12 @@
 :root {
   --white: #ffffff;
   --light-red: #fee1dd;
+  --light-red: #fff2f0;
+  --light-red-2: #fee1dd;
   --red: #ff1659;
   --light-blue: #1f2c8d;
   --blue: hsl(245, 100%, 22%);
+  --blue: #2c31f8;
   --dark-blue: rgb(0, 0, 86);
   --green: rgb(61, 212, 133);
 }

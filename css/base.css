@@ -21,8 +21,8 @@ html {
 
 body {
   height: auto;
-  color: var(--light-red);
-  background-color: var(--dark-blue);
+  color: var(--blue);
+  background-color: var(--light-red);
   position: relative;
 }
 

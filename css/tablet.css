@@ -18,8 +18,9 @@
   #intro .left {
     grid-column: span 6;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     margin-top: 0rem;
   }
 
@@ -47,11 +48,11 @@
   }
 
   #intro h1 {
-    font-size: min(26vw);
+    font-size: 200px;
   }
 
   #intro h2 {
-    font-size: min(6.5vw);
+    font-size: 100px;
   }
 
   /*
