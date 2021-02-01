@@ -11,415 +11,256 @@ Portfolio
     <link rel="icon" href="assets/images/favicon.svg" type="image/png" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
-      
-
-
     <link rel="stylesheet" href="css/index.css" />
     <meta name="theme-color" content="#09006e" />
   </head>
 
   <body>
+    <!-- Background -->
+    <div id="background">
+ 
+      <video loop autoplay muted playsinline>
+        <source src="assets/videos/background.mp4" type="video/mp4" />
+      </video>
+      <div class='color-mask'></div>
+    </div>
 
+    <!-- Header -->
+    <header id='header' class='container'>
+      <a class="home " href="#header">AF</a>
+      <nav id='nav'>
+        <a class="about" href="#about">about</a>
+        <a class="projects" href="#projects">work</a>
+        <a class="contact" href="#contact">contact</a>
+      </nav>
+    </header>
 
-    <video loop autoplay muted playsinline class="bg-video">
-      <source src="assets/videos/background.mp4" type="video/mp4" />
-    </video>
+    <!-- Intro -->
+    <section id="intro" class="container animate">
+      <div class="left">
+        <h1 class="flicker-slowest">
+          <span class="flicker-slow">a</span>lex<br/> fr<span class="flicker-fast">y</span>er 
+        </h1>
+      </div>
+      <div class="right">
+        <div class="card">
+          <h2>
+            Product<br/>Designer
+          </h2>
+          <h2>
+            experiences<br/>
+            interfaces<br/>
+            frontend
+          </h2>
+          <a href="#contact" class='arrow-btn'>
+            <span>hire me </span></a>
+        </div>
+      </div>
+    </section>
 
-    <div class="bg-gradient"></div>
+    <!-- About -->
+    <section id="about" class="container animate">
+      <header>
+        <h3>What<br/><span class="flicker-slowest">I do<span class="flicker-fast">.</span></span></h3>
+          <sup>Hi, I'm Alex </sup>
+
+          <div class="headshot-wrapper">
+            <img src="assets/images/headshot.jpg" alt="picture headshot of Alex Fryer" />    
+          </div>
+                
+          <p>I enjoy designing websites and apps,<br/>growing businesses through design,<br/> and making designs real with code.</p>
+        <hr>          
+      </header>
+      <section class="card" id='objective-ux'>
+        <sup>High-level</sup>
+        <h4 class='objective-headline'>User Experience Strategy</h4>
+        <p>
+          I work with researchers and marketers to design high-value experiences for users and businesses.
+        </p>
+
+        <ul>
+          <li>Personas</li>
+          <li>Journeys</li>
+          <li>Marketing UX</li>
+          <li>Sales UX</li>
+          <li>Success UX</li>
+          <li>A/B Tests</li>
+        </ul>
+      </section>
+      <section class="card" id='objective-ui'>
+        <sup>Mid-Level</sup>
+        <h4 class='objective-headline'>User Interface Prototyping</h4>
+        <p>
+          I work with PMs and designers to design new product interfaces at various levels of fidelity.     
+        </p>
+        <ul>
+          <li>Ideas</li> 
+          <li>Wireframes</li>
+          <li>Prototypes</li>
+          <li>Mockups</li>  
+          <li>Testing With Users</li> 
+          <li>Testing Without Users</li> 
+        </ul>
+      </section>
+      <section class="card" id='objective-frontend'>
+        <sup>Low-Level</sup>
+        <h4 class='objective-headline'>Frontend Development</h4>
+        <p>
+          I work with developers to turn design systems into frontend libraries, assets, and tools.
+        </p>
+      
+        <ul>
+          <li>Components</li>
+          <li>Interactions</li>
+          <li>Animations</li>
+          <li>Theming</li>
+          <li>Visualizations</li>
+          <li>Assets</li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container animate">
+          <header>
+            <h3>What<br/><span class="flicker-slowest">I <span class="flicker-fast">m</span>ake.</span></span></h3>
+            <p>From idea to wireframe,<br/>and prototype to production<br /><u>- my favorite work.</u> </p>
+          </header>
+          <article>
+            <header>
+              <sup>01</sup>
+              <h4><span>DFunds.</span> Exploration of big data tables, charts, and statistical models.</h4>
+            </header>
+            <section>
+              <sup>About</sup>
+              <p >
+                Dfunds helps seasoned crypto investors save time, money, and effort analyzing hundreds of investment funds running on the Ethereum blockchain. — DFunds wants to bring core features of Bloomberg, Morningstar, and ETFDb to the new and growing crypto native fund industry.  
+              </p>
+
+              <div class="screenshot-wrapper card">
+                <img
+                  src="assets/images/dfund-screenshot.png"
+                  alt="quiz"
+                  id="selected"
+                />
+              </div>
+            </section>
+            <aside>
+              <sup>Scope</sup>
+                <p>
+                  <strong>Sitemapping:</strong> 3 core product pages&nbsp;• <b>1.</b> Industry Overview&nbsp;• <b>2. </b> Fund Screener and&nbsp;• <b>3.</b> Fund Profiles.  
+                </p>
+                <p>
+                    <strong>UX strategy:</strong>  2 Personas — <b>1.</b> Ryder the Relative Investor and <b>2.</b> April the Absolute Investor
+                </p>
+                <p>
+                  <strong>UI prototyping:</strong> focuses on Progressiveness of tables, charts, and models for high-dimensional data
+                </p>
+                <p>
+                  <strong>Frontend:</strong> React Typescript components Emotion Css-In-Js styles. Main technical risk is table virtualization. 
+                </p>
+              <ul>
+                <li>
+                  <a
+                    href=""
+                    target="_blank"
+                    ><span class='icon-github'></span
+                  > Source</a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    target="_blank"
+                    ><span class='icon-github'></span
+                  > Source</a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    onclick='disabled'
+                    ><span class='icon-external-link'></span
+                      > Launching q2 2021</a>
+                </li>
+              </ul>
+            </aside>
+          </article>
+         </section>
+
+    <!-- Contact -->
+    <section id="contact" class='container animate'>
+    
+      <h3>Let's work <br/><u>together.</u> </h3>
+        <p>
+          Building a branded website, landing page, or web app? Have a question about web design or development? Spam bot? — <strong>Let's chat!</strong> 
+        </p>
+
+        <ul>
+          <li>
+            <a href="mailto:alex.jeffrey.fryer@gmail.com"
+              ><span class="icon-mail"></span>Email</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ajfryer" target="_blank"
+              ><span class="icon-github"></span>Github</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/alexjfryer/"
+              target="_blank"
+              ><span class="icon-linkedin"></span>Linkedin</a
+            >
+          </li>
+        </ul>
+  
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class='container'>
+      <div class="left">
+        <a href="" class='footer-credit'>
+          Alex Fryer 2021
+        </a>
+      </div>
+      <div class="right">
+        <a href="" class='footer-credit'>
+          <span class='icon-github'></span>
+        </a>
+        <a href="" class='footer-credit'>
+          <span class='icon-star'></span>
+        </a>
+        <a href="" class='footer-credit'>
+          <span class='icon-heart'></span>
+        </a>
+      </div>
+    </footer>
 
     <div id="loader-wrapper">
 			<div id="loader">AF</div>
 		</div>
 
-    <nav class="animate">
-      <div class="container animate">
-        <a class="home " href="#header">AF</a>
-
-          <a class="about" href="#about">about</a>
-          <a class="projects" href="#projects">work</a>
-          <a class="contact" href="#contact">contact</a>
-      </div>
-
-
-
-
-    </nav>
-
-    <header id="header">
-      <div class="container animate">
-        <div class="contents">
-          <h1 class="header-headline flicker-slowest">
-<span class="flicker-slow">a</span>lex<br/> fr<span class="flicker-fast">y</span>er 
-          </h1>
-
-          <div class='right partial-border'>
-
-            <h2 class='header-subline-title'>
-              Fullstack<br/>Designer
-            </h2>
-            <h2 class='header-subline-work'>
-              experiences<br/>
-              interfaces<br/>
-              frontend
-            </h2>
-
-
-
-            <a href="#contact" class='arrow-btn'>
-              <span>hire me </span></a>
-          </div>
-
-          
-      
-
-        </div>
-        <div class="header-bg">
-        </div>
-      </div>
-    </header>
-
-    <section id="about">
-      <div class="container animate">
-        <div class="content">
-          <h3 class='about-headline'>What<br/><span class="flicker-slowest">I do<span class="flicker-fast">.</span></span></h3>
-
-          <div class="about-intro">
-            <p class='about-eyebrow'>Hi, I'm Alex </p>
-
-            <div class="headshot-wrapper">
-              <img class="headshot-img" src="assets/images/headshot.jpg" alt="" />
-            </div>
-            
-            <p class='summary'>I enjoy designing websites and apps,<br/>using design to boost business results,<br/> and making designs real with code.</p>
-          </div>
-
-          <hr>
-          
-          <div class="objectives">
-
-
-              <div class="objective partial-border" id='objective-ux'>
-                <h4 class='objective-eyebrow'>High-level</h4>
-                <h4 class='objective-headline'>User Experience Strategy</h4>
-                <p>
-                  I work with researchers and marketers to design UX to boost business results.
-                </p>
-    
-                <ul>
-                  <li>Buyer Personas</li>
-                  <li>Customer Journeys</li>
-                  <li>Demand Generation UX</li>
-                  <li>Sales Enablement UX</li>
-                  <li>Customer Success UX</li>
-                  <li>A/B Testing</li>
-                </ul>
-              </div>
-
-
-            <div class="objective partial-border" id='objective-ui'>
-              <h4 class='objective-eyebrow'>Mid-Level</h4>
-              <h4 class='objective-headline'>User Interface Prototyping</h4>
-              <p>
-                I work with PMs and designers to validate new interfaces at various levels of fidelity.     
-              </p>
-              <ul>
-                <li>Idea Generation</li> 
-                <li>Static Wireframes</li>
-                <li>Interactive Prototypes</li>
-                <li>Visual Mockups</li>  
-                <li>Testing With Users</li> 
-                <li>Testing Without Users</li> 
-              </ul>
-            </div>
-
-
-            <div class="objective partial-border" id='objective-frontend'>
-              <h4 class='objective-eyebrow'>Low-Level</h4>
-              <h4 class='objective-headline'>Frontend Development</h4>
-              <p>
-                I work with developers to turn design systems into frontend libraries, assets, and tools.
-              </p>
-            
-              <ul>
-                <li>Components</li>
-                <li>Interactions</li>
-                <li>Animations</li>
-                <li>Style Architecture</li>
-                <li>Data Visualizations</li>
-                <li>Visual Assets</li>
-              </ul>
-            </div>
-  
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container animate">
-        <div class="content">
-          <header class="projects-header">
-            <h3 class='projects-headline'>What<br/><span class="flicker-slowest">I <span class="flicker-fast">m</span>ake.</span></span></h3>
-            <h3 class='projects-subline'>From idea to wireframe,<br/>and prototype to production<br /><u>- my favorite work.</u> </h3>
-          </header>
-
-
-          <div class="project-grid">
-            <div class="project ">
-
-                <div class="project-scope">
-
-                  <ul class='tags'>
-      
-                    <li>
-                      UX
-                    </li>
-
-                    <li>
-
-                        UI
-                    </li>
-
-                    <li>
-                      Frontend
-                    </li>
-                  </ul>
-      
-
-                  <div class="value-proposition">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magni, vitae debitis ipsam tenetur dicta illo minus iure, eveniet eaque dolor ut in nostrum a, officia voluptates asperiores sint praesentium?
-                    </p>
-
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magni, vitae debitis ipsam tenetur dicta illo minus iure, eveniet eaque dolor ut in nostrum a, officia voluptates asperiores sint praesentium?
-                    </p>
-                    
-                  </div>
-
-                  <ul class='links'>
-      
-
-                    <li>
-                      <a
-                        href="https://github.com/ajfryer/crypto-robos-client"
-                        target="_blank"
-                        class='arrow-btn'
-                        ><span>View Project</span
-                      ></a>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-                <div class="project-description ">
-
-                  <h4 class='project-headline'>DFunds</h4>
-
-                  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-
-                  <p class="project-summary">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit Beatae magni, vitae debitis.
-                  </p>
-
-                  <div class="screenshot partial-border">
-                    <img
-                      src="assets/images/dfund-screenshot.png"
-                      alt="quiz"
-                      id="selected"
-                    />
-                  </div>
-
-
-                </div>
-
-            </div>
-
-            <div class="project partial-border">
-
-              <div class="screenshot">
-                <img
-                  src="assets/images/dfund-screenshot.png"
-                  alt="quiz"
-                  id="selected"
-                />
-              </div>
-
-              <div class="project-description ">
-
-                <h4 class='project-headline'>Roach</h4>
-
-                <p class="project-summary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit Beatae magni, vitae debitis.
-                </p>
-
-                <ul class='tags'>
-    
-                  <li>
-                    UX
-                  </li>
-
-                  <li>
-
-                      UI
-                  </li>
-
-                  <li>
-
-                    Brand
-                </li>
-
-                  <li>
-                    Frontend
-                  </li>
-                  <li>
-                    Backend
-                  </li>
-                </ul>
-    
-
-                <div class="value-proposition">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magni, vitae debitis ipsam tenetur dicta illo minus iure, eveniet eaque dolor ut in nostrum a, officia voluptates asperiores sint praesentium?
-                  </p>
-                  
-                </div>
-
-                <ul class='links'>
-    
-
-                  <li>
-                    <a
-                      href="https://github.com/ajfryer/crypto-robos-client"
-                      target="_blank"
-                      >View Project →</span
-                    ></a>
-                  </li>
-
-                </ul>
-              </div>
-
-            </div>
-
-            <div class="project partial-border">
-
-              <div class="screenshot">
-                <img
-                  src="assets/images/dfund-screenshot.png"
-                  alt="quiz"
-                  id="selected"
-                />
-              </div>
-
-              <div class="project-description ">
-
-                <h4 class='project-headline'>Crypto Robos</h4>
-
-                <p class="project-summary">
-                  The authority on 100+ crypto-native investment funds.
-                </p>
-
-                <ul class='tags'>
-
-                  <li>
-                    UX
-                  </li>
-
-                  <li>
-
-                      UI
-                  </li>
-
-                  <li>
-                    Frontend
-                  </li>
-                </ul>
-
-
-                <div class="value-proposition">
-                  <p>
-                    DFunds wants to bring Bloomberg-quality analysis to crypto fund investing. My scope includes end-to-end product design and component development for the MVP. 
-                  </p>
-                  
-                </div>
-
-                <ul class='links'>
-
-
-                  <li>
-                    <a
-                      href="https://github.com/ajfryer/crypto-robos-client"
-                      target="_blank"
-                      >View Project →</span
-                    ></a>
-                  </li>
-
-                </ul>
-              </div>
-
-            </div>
-
-            <div class="project partial-border">
-
-              <div class="screenshot">
-                <img
-                  src="assets/images/dfund-screenshot.png"
-                  alt="quiz"
-                  id="selected"
-                />
-              </div>
-
-              <div class="project-description ">
-
-                <h4 class='project-headline'>Crypto Trend Following</h4>
-
-                <p class="project-summary">
-                  The authority on 100+ crypto-native investment funds.
-                </p>
-
-                <ul class='tags'>
-
-                  <li>
-                    UX
-                  </li>
-
-                  <li>
-
-                      UI
-                  </li>
-
-                  <li>
-                    Frontend
-                  </li>
-                </ul>
-
-
-                <div class="value-proposition">
-                  <p>
-                    DFunds wants to bring Bloomberg-quality analysis to crypto fund investing. My scope includes end-to-end product design and component development for the MVP. 
-                  </p>
-                  
-                </div>
-
-                <ul class='links'>
-
-
-                  <li>
-                    <a
-                      href="https://github.com/ajfryer/crypto-robos-client"
-                      target="_blank"
-                      >View Project →</span
-                    ></a>
-                  </li>
-
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-          <!--
+    <div class="cursor-follower"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha384-aeOf8PUQ30Impyyio8FDxFHefK/3nHBJWjuT1u1FnJHZU+ro9q9E9cXUzfWBk0kT"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
+
+
+ <!--
           <div class="project partial-border">
 
             <div class="screenshot">
@@ -604,57 +445,4 @@ Portfolio
               </div>
             </div>
           </div> -->
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container animate">
-        <div class="content ">
-          <div class="wrapper">
-            <h3 class='contact-headline'>Let's work <br/><u class='contact-subline'>together.</u> </h3>
-            <p>
-              Building a branded website, landing page, or web app? Just have a question about web design or development? Spam Bot?<br/> Let's chat!
-            </p>
-
-            <ul>
-              <li>
-                <a href="mailto:alex.jeffrey.fryer@gmail.com"
-                  ><span class="icon-mail"></span>Email</a
-                >
-              </li>
-              <li>
-                <a href="https://github.com/ajfryer" target="_blank"
-                  ><span class="icon-github"></span>Github</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/alexjfryer/"
-                  target="_blank"
-                  ><span class="icon-linkedin"></span>Linkedin</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="cursor-follower"></div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-      integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-      integrity="sha384-aeOf8PUQ30Impyyio8FDxFHefK/3nHBJWjuT1u1FnJHZU+ro9q9E9cXUzfWBk0kT"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-
-    <script type="module" src="js/index.js"></script>
-  </body>
-</html>
+    

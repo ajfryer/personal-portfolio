@@ -3,7 +3,7 @@ const $document = $(document);
 const $window = $(window);
 const $follower = $('#follower');
 const $sections = $('.animate');
-const $nav = $('nav');
+const $header = $('#header');
 
 // adds or removes visible class on .animate sections based on screen position
 const animateSections = () => {
@@ -22,17 +22,17 @@ const animateSections = () => {
 };
 
 // adds or removes scrolled class on nav based on screen position
-const animateNav = () => {
-  $nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height());
+const animateHeader = () => {
+  $header.toggleClass('scrolled', $(document).scrollTop() > $header.height());
 };
 
 // listens for updated screen position and calls animate functions
 export const scrollListener = () => {
-  animateNav();
+  animateHeader();
   animateSections();
 
   $document.scroll((e) => {
-    animateNav();
+    animateHeader();
     animateSections();
   });
 };
