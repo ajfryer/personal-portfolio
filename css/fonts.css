@@ -24,6 +24,7 @@ p {
   line-height: 1.65;
 
   font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'DINCondensed';
 
   font-weight: 100;
   margin: 0;
@@ -36,7 +37,7 @@ h4,
 h5 {
   margin: 0;
   line-height: 1.2;
-  font-weight: 900;
+  font-weight: 100;
 }
 
 h1 {
@@ -50,7 +51,7 @@ small,
 
 a {
   color: var(--blue);
-  font-weight: 400;
+  font-weight: 100;
   text-transform: uppercase;
   text-decoration: none;
 }

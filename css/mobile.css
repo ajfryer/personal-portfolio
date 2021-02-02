@@ -11,11 +11,11 @@ Header
 */
 #header {
   grid-column: span 12;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: calc(100%);
-  margin: 0 auto;
+  margin: 10rem auto 0 auto;
   z-index: 999;
   background-color: transparent;
   transition: var(--transition);
@@ -24,13 +24,14 @@ Header
   transition-duration: 300ms;
   height: 50px;
   padding: 1em 2em;
-  border-left: 1px solid var(--blue);
-  border-bottom: 1px solid var(--blue);
-  border-right: 1px solid var(--blue);
+  border-top: 1px solid var(--blue);
+  border-bottom: 1px double var(--blue);
+  border-bottom-style: double;
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 }
 
+/*
 #header::before {
   content: '';
   width: 0.5rem;
@@ -60,10 +61,9 @@ Header
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   transition: all 250ms ease-in-out;
-}
+}*/
 
 #header nav {
-  overflow-x: hidden;
   display: flex;
   justify-content: space-evenly;
 }
@@ -73,6 +73,14 @@ Header
   transition-duration: 300ms;
   height: 50px;
   background-color: var(--light-red);
+}
+
+#header.scrolled::before {
+  background-color: var(--blue);
+}
+
+#header.scrolled::after {
+  background-color: var(--blue);
 }
 
 /*
@@ -103,18 +111,21 @@ Header
   margin-right: auto;
   margin-left: 0;
   position: relative;
+  line-height: 1;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 #header a.home::before,
 #header a.home::after {
   background-color: transparent;
 }
-
+/*
 #header a.home::before {
   position: absolute;
   content: '';
-  border-right: calc(1rem / 10) solid var(--red);
-  border-top: calc(1rem / 10) solid var(--red);
+  border-right: calc(1rem / 10) solid var(--blue);
+  border-top: calc(1rem / 10) solid var(--blue);
   border-top-right-radius: calc(var(--border-radius) / 2);
   border-bottom-right-radius: calc(var(--border-radius) / 2);
   width: 0.5em;
@@ -126,8 +137,8 @@ Header
 #header a.home::after {
   content: '';
   position: absolute;
-  border-left: calc(1rem / 10) solid var(--red);
-  border-bottom: calc(1rem / 10) solid var(--red);
+  border-left: calc(1rem / 10) solid var(--blue);
+  border-bottom: calc(1rem / 10) solid var(--blue);
   border-bottom-left-radius: calc(var(--border-radius) / 2);
   border-bottom-right-radius: calc(var(--border-radius) / 2);
   height: 0.5em;
@@ -135,13 +146,13 @@ Header
   bottom: 0;
   left: 0;
   transition: var(--transition);
-}
-
+}*/
+/*
 #header a.home:hover::before {
   position: absolute;
   content: '';
-  border-right: calc(1rem / 10) solid var(--red);
-  border-top: calc(1rem / 10) solid var(--red);
+  border-right: calc(1rem / 10) solid var(--blue);
+  border-top: calc(1rem / 10) solid var(--blue);
   border-top-right-radius: calc(var(--border-radius) / 2);
   border-radius: calc(var(--border-radius) / 2);
   width: 100%;
@@ -154,8 +165,8 @@ Header
 #header a.home:hover::after {
   content: '';
   position: absolute;
-  border-left: calc(1rem / 10) solid var(--red);
-  border-bottom: calc(1rem / 10) solid var(--red);
+  border-left: calc(1rem / 10) solid var(--blue);
+  border-bottom: calc(1rem / 10) solid var(--blue);
   border-bottom-left-radius: calc(var(--border-radius) / 2);
   border-bottom-right-radius: calc(var(--border-radius) / 2);
   border-radius: calc(var(--border-radius) / 2);
@@ -164,13 +175,19 @@ Header
   bottom: 0;
   left: 0;
   transition: var(--transition);
+}*/
+
+#header a.home:hover {
+  border-top: 1px solid var(--blue);
+  border-bottom: 1px solid var(--blue);
+  transition: var(--transition);
 }
 
 /*
 Intro
 */
 #intro {
-  min-height: calc(100vh - 50px);
+  height: calc(100vh - 50px);
   padding: 50px 1em 2em 1em;
 }
 
@@ -194,7 +211,7 @@ Intro
 
 #intro .card:hover::before,
 .card:hover::after {
-  background-color: var(--light-blue);
+  background-color: var(--blue);
 }
 
 #intro .card:hover::before {
@@ -208,23 +225,37 @@ Intro
 }
 
 #intro h1 {
-  font-weight: 100;
+  font-weight: 900;
   writing-mode: vertical-rl;
   color: var(--blue);
 
   -webkit-text-stroke: 0px var(--blue);
   text-stroke: 0px var(--blue);
+  /*text-shadow: 4px 4px 0px rgba(44, 49, 248, 1);*/
   letter-spacing: normal;
 
   margin-left: -0.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-family: 'DINCondensed';
   font-size: 25vw;
   z-index: 5;
   line-height: 0.9;
   position: relative;
   font-size: min(25vw, 115px);
   margin: 0;
-  margin-top: -6rem;
+  margin-top: 0rem;
+}
+
+#intro h1 span {
+  font-size: 1rem;
+  margin-left: 0;
+  line-height: 1;
+  position: absolute;
+  top: 0.7rem;
+  left: 17rem;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-weight: 700;
 }
 
 /*
@@ -264,6 +295,25 @@ Intro
 #intro a {
   margin-top: auto;
   margin-bottom: 2rem;
+  border-radius: 72% 28% 25% 75% / 71% 49% 51% 29%;
+  background-color: #ddffef;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro a::before {
+  border-radius: 30% 70% 70% 30% / 32% 30% 70% 68%;
+  content: '';
+  position: absolute;
+  background-color: #e6e1fc;
+  height: 100px;
+  width: 125px;
+  left: 05%;
+  top: --10%;
+  z-index: -1;
 }
 
 /*
@@ -274,23 +324,44 @@ about section style
   position: relative;
 }
 
+#about::after {
+  height: 0;
+  width: 120%;
+  padding: 0px;
+  border-radius: 0px;
+  z-index: -100;
+  left: -10%;
+  bottom: -320px;
+  transform: rotate(-10deg) skew(-5deg);
+  -webkit-transform: rotate(-deg) skew(-20deg);
+  border-top: 640px solid var(--light-red-2);
+  border-left: 64px solid transparent;
+  border-right: 128px solid transparent;
+  border-bottom: 0px solid transparent;
+  position: absolute;
+  content: '';
+}
+
 #about header {
   grid-column: span 12;
 }
 
 #about h3 {
   font-size: min(20vw, 100px);
-
-  -webkit-text-stroke: 0.75px var(--green);
-  text-stroke: 0.75px var(--green);
+  -webkit-text-stroke: 0.75px var(--blue);
+  text-stroke: 0.75px var(--blue);
   color: transparent;
   position: relative;
   text-align: right;
   padding-bottom: 1rem;
   line-height: 1;
-  font-family: Merriweather;
+  color: var(--light-red);
+  font-weight: 700;
+
+  max-width: 640px;
 }
 
+/*
 #about h3::before {
   content: '';
   position: absolute;
@@ -303,7 +374,7 @@ about section style
   background-repeat: space;
   z-index: -2;
   transform: rotate(2deg);
-}
+}*/
 
 #about .about-intro {
   position: relative;
@@ -312,9 +383,9 @@ about section style
 #about sup {
   margin: 0 0 0 0;
   text-transform: capitalize;
-  color: var(--green);
+  color: var(--blue);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
   text-align: left;
   line-height: 1;
   display: inline;
@@ -324,14 +395,14 @@ about section style
 #about hr {
   max-width: 75px;
   height: 2px;
-  background-color: var(--green);
+  background-color: var(--blue);
   border: 0px;
   margin: 0px;
   margin-bottom: 0px;
 }
 
 #about header p {
-  color: var(--light-red);
+  color: var(--blue);
   font-weight: 100;
   font-size: 1.25rem;
   text-align: left;
@@ -339,6 +410,8 @@ about section style
   font-family: Merriweather;
   margin: 0.75rem 0 1rem 0;
   font-size: min(5vw, 23px);
+  max-width: max-content;
+  background-color: var(--light-red);
 }
 
 #about .headshot-wrapper {
@@ -374,9 +447,10 @@ about section style
   grid-column: span 12;
   height: fit-content;
   height: -moz-fit-content;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   transition: var(--transition);
   max-width: 320px;
+  background-color: var(--light-red);
   grid-auto-columns: minmax(320px, auto);
 }
 
@@ -406,21 +480,22 @@ about section style
   content: '—';
   position: absolute;
   left: 0px;
-  color: var(--green);
+  color: var(--blue);
 }
 
 #about section h4 {
   margin-right: 2rem;
   margin-top: 0px;
   margin-bottom: 1rem;
-  color: var(--green);
+  color: var(--blue);
+  font-weight: 700;
   font-size: 1rem;
 }
 
 #about section sup {
   text-transform: uppercase;
   font-size: smaller;
-  color: var(--green);
+  color: var(--blue);
   font-weight: 100;
   margin-bottom: 0.25rem;
   letter-spacing: 0.5px;
@@ -460,8 +535,8 @@ Projects
 
 #projects header h3 {
   font-size: min(20vw, 100px);
-  -webkit-text-stroke: 0.75px var(--green);
-  text-stroke: 0.75px var(--green);
+  -webkit-text-stroke: 0.75px var(--blue);
+  text-stroke: 0.75px var(--blue);
   color: transparent;
   position: relative;
   text-align: left;
@@ -495,8 +570,8 @@ Projects
   z-index: 2;
   font-weight: 100;
   line-height: 1.2;
-  -webkit-text-stroke: 0px var(--green);
-  text-stroke: 0px var(--green);
+  -webkit-text-stroke: 0px var(--blue);
+  text-stroke: 0px var(--blue);
 
   margin: 0 auto;
 }
@@ -524,8 +599,8 @@ Projects
   z-index: 0;
   margin: 0 auto;
   font-family: Merriweather;
-  -webkit-text-stroke: 0.75px var(--green);
-  text-stroke: 0.75px var(--green);
+  -webkit-text-stroke: 0.75px var(--blue);
+  text-stroke: 0.75px var(--blue);
 }
 
 #projects article header h4 span {
@@ -595,6 +670,7 @@ Projects
   padding: 0px;
   margin-left: 0rem;
   border: none;
+  box-shadow: 0 0.6rem 4rem rgb(0 0 0 / 50%);
 }
 
 #projects .screenshot-wrapper img {

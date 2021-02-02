@@ -8,7 +8,7 @@
 
   .container {
     max-width: 1280px;
-    padding: 6em 2em;
+    padding: 4em;
   }
 
   .cursor,
@@ -16,20 +16,17 @@
     display: block;
   }
 
-  .card::before {
-    width: 0.75rem;
-    top: 0.75rem;
-  }
-
-  .card::after {
-    height: 0.75rem;
-    left: 0.75rem;
-  }
 
   #header {
     height: 4rem;
-    padding: auto 2rem;
-    left: calc(50% - 640px);
+    padding: 0 1rem;
+    left: 0;
+    width: calc(1280px - 128px);
+    margin-top: 4rem;
+    border-bottom: 1px double var(--blue);
+}
+
+
   }
 
   /* #top-nav */
@@ -60,9 +57,11 @@
   /* header */
 
   #intro {
-    min-height: calc(100vh);
+    height: calc(100vh);
 
-    padding: 3rem 2rem;
+    padding: 4rem 4rem;
+    margin-top: -4rem;
+    max-height: 1000px;
   }
 
   #intro header {
@@ -74,34 +73,61 @@
   }
 
   #intro .right {
-    justify-content: center;
-
+    justify-content: flex-start;
     background-repeat: space;
     grid-column: span 5;
     position: relative;
+
   }
 
-  #intro .right::before {
+  #intro::before {
     content: '';
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: 0;
-    background-color: var(--light-red-2);
-    width: 100vw;
-    height: 100vw;
+    z-index: 0;
+    border-bottom: 960px solid var(--light-red-2);
+    border-left: 300px solid transparent;
+    border-right: 100px solid transparent;
+    height: 0;
+    width: 960px;
+    transform: rotate(-50deg);
+
   }
 
   #intro .right::after {
+    
     content: '';
     position: absolute;
     left: -75%;
-    bottom: -32rem;
-    background: radial-gradient(var(--blue), 1.5px, transparent 0);
+    bottom: -350px;
+    background: radial-gradient(var(--blue), 1px, transparent 0);
     background-size: 1rem 1rem;
     background-repeat: space;
     width: 100%;
-    height: 36rem;
+    height: 450px;
   }
+
+
+
+  #intro h2 {
+    font-size: 5rem;
+  }
+
+  #intro h1 {
+    font-size: 9rem;
+    position: relative;
+    margin-left: -0.25em;
+    margin-top: -0.25em;
+    opacity: .8;
+    font-weight: 100;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'DINCondensed';
+    text-transform: uppercase;
+
+  }
+
+
 
   #intro .left {
     grid-column: span 7;
@@ -167,6 +193,10 @@
   }
 
   /* about */
+
+  #about {
+    max-width: 1120px;
+  }
 
   #about .container {
   }

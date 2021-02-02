@@ -9,7 +9,7 @@ html {
 
 :root {
   --transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  --border-radius: 4px;
+  --border-radius: 0px;
 }
 
 ::selection {
@@ -23,7 +23,21 @@ body {
   height: auto;
   color: var(--blue);
   background-color: var(--light-red);
+
   position: relative;
+}
+
+body::after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-image: url(../assets/images/noise.gif);
+  opacity: 0.05;
+  z-index: 1000;
+  pointer-events: none;
 }
 
 .container {
@@ -55,34 +69,64 @@ body {
   z-index: -100;
 }
 
-.cursor-follower {
+.cursor {
   position: fixed;
-  background-color: var(--red);
-  opacity: 1;
-  width: 90px;
-  height: 90px;
-  /*border: 2px solid var(--red);*/
+  background-color: white;
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
+  opacity: 1;
   z-index: 1;
-  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
-    0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) height,
+    0.3s cubic-bezier(0.75, -0.27, 0.3, 1.33) width;
   user-select: none;
   pointer-events: none;
-  z-index: 999;
-  top: -100px;
-  left: -100px;
-  display: hidden;
-  transform: translate(-50%, -50%);
+  z-index: 10000;
+  transform: scale(1);
+  transform: translate(-55%, -60%);
   will-change: transform;
 }
 
-p:hover {
-  mix-blend-mode: difference;
+/*
+.cursor::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90px;
+  height: 90px;
+  background-color: var(--blue);
+  opacity: 0.33;
+}*/
+
+.cursor.active {
+}
+
+.cursor-follower {
+  position: fixed;
+  background-color: rgba(44, 49, 248, 0.1);
+
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.6s cubic-bezier(0.75, -0.27, 0.3, 1.33) border;
+  border: 0px;
+  user-select: none;
+  pointer-events: none;
+  transform: translate(-38%, -38%);
+  z-index: 10000;
+  will-change: transform;
 }
 
 .cursor-follower.active {
-  opacity: 1;
   /*transform: scale(1);*/
+}
+
+p:hover {
   mix-blend-mode: difference;
 }
 
@@ -97,12 +141,12 @@ u {
 
   background-image: linear-gradient(
     to right,
-    var(--light-blue) 100%,
+    var(--green) 100%,
     transparent 100%
   );
-  background-position: 0 0.8em;
+  background-position: 0 0.25em;
   background-repeat: repeat-x;
-  background-size: 0.5em 1em;
+  background-size: 0.1em 0.5em;
 }
 
 span.u::before {
@@ -157,7 +201,7 @@ a.arrow-btn:hover span:after {
 }
 
 .card {
-  border: 2px solid var(--light-blue);
+  border: 1px solid var(--blue);
   border-radius: var(--border-radius);
   transition: all 250ms ease-in-out;
   position: relative;
@@ -171,14 +215,14 @@ a.arrow-btn:hover span:after {
   width: 0.4rem;
   top: 0.4rem;
   transition: all 250ms ease-in-out;
-  background-color: var(--light-blue);
+  background-color: var(--blue);
 }
 
 .card:hover::after {
   height: 0.4rem;
   left: 0.4rem;
   transition: all 250ms ease-in-out;
-  background-color: var(--light-blue);
+  background-color: var(--blue);
 }
 
 .card::before {
@@ -186,8 +230,8 @@ a.arrow-btn:hover span:after {
   width: 0.5rem;
   height: 100%;
   background-color: transparent;
-  border-top: 2px solid var(--light-blue);
-  border-right: 2px solid var(--light-blue);
+  border-top: 1px solid #5b56eb;
+  border-right: 1px solid #5b56eb;
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   position: absolute;
@@ -195,14 +239,15 @@ a.arrow-btn:hover span:after {
   left: 100%;
   z-index: -1;
   transition: all 250ms ease-in-out;
+  background-color: #5b56eb;
 }
 
 .card::after {
   content: '';
   width: 100%;
   height: 0.5rem;
-  border-left: 2px solid var(--light-blue);
-  border-bottom: 2px solid var(--light-blue);
+  border-left: 1px solid #5b56eb;
+  border-bottom: 1px solid #5b56eb;
   position: absolute;
   left: 0.5rem;
   top: 100%;
@@ -210,4 +255,5 @@ a.arrow-btn:hover span:after {
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   transition: all 250ms ease-in-out;
+  background-color: #5b56eb;
 }
